@@ -37,7 +37,7 @@ Session(app)
 
 @app.route("/")
 def index():
-    return render_template("usr_list.html")
+    return redirect("/usr_list.html")
 
 @app.route("/bbye")
 def bye():
