@@ -2,7 +2,6 @@ import random
 from flask import Flask, render_template, request, redirect, session
 from flask_session import Session
 from cs50 import SQL
-import pygal
 
 
 app = Flask(__name__)
