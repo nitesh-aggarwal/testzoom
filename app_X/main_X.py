@@ -65,3 +65,5 @@ def add_usr():
             return render_template("sorry.html", message = "email")
         db.execute("INSERT INTO usr (name, email) VALUES (:name1, :email1)",name1 = name, email1 = email)
         return redirect("/usr_list")
+        
+        
