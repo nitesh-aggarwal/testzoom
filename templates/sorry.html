@@ -3,12 +3,28 @@
 {% block css %}
     h1{
     color:red;
+    text-align:center;
+    }
+     .a{
+    text-align:center;
+    text-size:medium;
     }
 {% endblock %}
 
 {% block body %}
 
-        <h1> YOU MUST ENTER {{message}} </h1>
+<br>
+<br>
+<br>
 
-        <a href = "/add_usr">GO BACK</a>
+        <div class="alert alert-danger" role="alert">
+<h1> YOU MUST ENTER {{message}}</h1>
+</div>
+<br>
+<br>
+<br>
+ <div class="a">
+ <a href = "/usr_list" style = "text-align=center">GO BACK</a>
+</div>
+
    {% endblock %}
