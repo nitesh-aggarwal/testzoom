@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block body %}
+        <h1>USERS REGISTERED ARE</h1>
+
+         <ul>
+            {% for row in rows %}
+            <li>{{loop.index}}{{ row["name"] }}({{row["email"]}})</li>
+            {% endfor %}
+        </ul>
+        <br>
+        {% if rows|length == 11 %}
+        klklklkl11111111
+        {% endif %}
+        <br>
+        <a href = "/add_usr"><h1>ADD USERS</h1></a><br><br>
+
+
+   {% endblock %}
+
+   request.form.get('fields' [default=None])
+
+   CREATE TABLE IF NOT EXISTS 'users'
+   ('id' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+   'username' TEXT NOT NULL,
+   'hash' TEXT NOT NULL,
+   'cash' NUMERIC NOT NULL DEFAULT 10000.00 );
+
+CREATE TABLE IF NOT EXISTS 'records' (
+'rec_id' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+'usr_id' INTEGER NOT NULL,
+'cat' TEXT NOT NULL, ->  req
+'s_cat' TEXT DEFAULT ,
+'name' TEXT,
+'state' TEXT,
+'post' TEXT,-> req
+'m_no1' TEXT, ->
+'m_no2' TEXT,
+'m_no3' TEXT,
+'amount' NUMERIC NOT NULL, -> 
+'info' TEXT,
+'time' TEXT NOT NULL,
+'fu' TEXT,FOREIGN KEY(usr_id) REFERENCES users(id));
+
+
+usr_id, cat, s_cat, name, state, post, m_no1, m_no2, m_no3, amount, info, time

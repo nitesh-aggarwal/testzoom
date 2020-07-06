@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+        {% block body %}
+        <h1>My TASKS</h1>
+
+        <ul>
+            {% for todo in todos %}
+            <li>{{todo}}</li>
+            {% endfor %}
+        </ul>
+
+        <br>
+        <br>
+        <a href="/add"> ADD TASK</a>
+   {% endblock %}
